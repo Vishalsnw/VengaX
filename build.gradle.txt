@@ -1,0 +1,18 @@
+/*
+ * File: build.gradle
+ * Created: 2025-06-03
+ * Author: Vishalsnw
+ * Last Modified: 2025-06-03 14:57:27 UTC
+ */
+
+buildscript {
+    ext {
+        kotlin_version = '1.9.10'
+        agp_version = '8.1.1'
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}

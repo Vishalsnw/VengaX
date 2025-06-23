@@ -1,0 +1,33 @@
+name: Build VengaX APK
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: 'adopt'
+
+      - name: 📦 Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: 🏗️ Build APK
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+
+      - name: 📤 Upload APK Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: VengaX-APK
+          path: app/build/outputs/apk/debug/app-debug.apk

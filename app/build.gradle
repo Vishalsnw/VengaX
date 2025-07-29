@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.mycompany.vengax' // Replace with your actual package
+    namespace 'com.vengax'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.mycompany.vengax"
+        applicationId "com.vengax"
         minSdk 21
         targetSdk 34
         versionCode 1

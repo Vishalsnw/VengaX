@@ -18,3 +18,16 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./gradlew assembleDebug"
+
+[[workflows.workflow]]
+name = "Setup Android Environment"
+author = 45718520
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "chmod +x gradlew"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./gradlew wrapper --gradle-version=8.0"

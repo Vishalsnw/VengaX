@@ -1,11 +1,8 @@
-modules = ["java-graalvm22.3"]
-run = "npm run build "
+
+modules = ["android"]
 
 [nix]
-channel = "stable-25_05"
-
-[deployment]
-run = ["sh", "-c", "npm run build "]
+channel = "stable-24_05"
 
 [workflows]
 runButton = "Build Android APK"
